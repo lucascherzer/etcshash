@@ -20,7 +20,7 @@ while read line; do
     echo "salt: $salt"
     echo "---"
   else
-    echo "Error: line does not match the expected format."
-    echo "---"
+    >&2 echo "Error: line does not match the expected format."
+    >&2 echo "---"
   fi
 done < /dev/stdin
