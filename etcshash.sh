@@ -27,7 +27,7 @@ while getopts ":ah" opt; do
 done
 
 # Print help if no arguments given
-if [ $1 -eq "-h" ]; then
+if [ "$1" == "-h" ]; then
     usage
 fi
 
