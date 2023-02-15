@@ -8,8 +8,7 @@ Currently, the script only supports reading from stdin:
 ```sh
 cat /etc/shadow | ./etcshash.sh
 ```
-
-If a file contains many service accounts, the script can not yet handle them correctly and outputs a lot of errors. To circumvent this, errors can be redirected to `/dev/null`:
+or output every field of the `/etc/shadow` file with the `-a` flag
 ```sh
-cat /etc/shadow | ./etcshash.sh 2>/dev/null
+cat /etc/shadow | ./etcshash.sh -a
 ```
