@@ -2,6 +2,8 @@
 
 > A shell script to parse the /etc/shadow file and automatically display the relevant information
 
+This script aims to make post exploitation easier by parsing the `/etc/shadow` file and output the information in a concise way that makes steps like hash cracking easier
+
 ## Usage
 
 Currently, the script only supports reading from stdin:
